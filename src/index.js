@@ -1,7 +1,7 @@
-class Person {
-    constructor(name, age){
+class People {
+    constructor(name, age) {
         this.name = name,
-        this.age = age
+            this.age = age
     }
 
 
@@ -15,15 +15,31 @@ class Person {
 
 
     eat() {
-        alert(`${this.getName} 可以吃饭`);
+        alert(`${this.getName()} 可以吃饭`);
     }
 
     speak() {
-        alert(`${this.getName} 可以说话`);
+        alert(`可以说话`);
+    }
+}
+//子类集成父类
+class Studen extends People {
+
+    constructor(name, age, number) {
+        super(name, age)
+        this.number = number
+    }
+
+    study() {
+        alert(`${this.name} study`)
     }
 }
 
 
-let p = new Person('shijf', 15)
+let xiaoming = new Studen('xiaoming', 10, 'A1')
+xiaoming.eat();
 
-p.eat();
+alert(xiaoming.number)
+xiaoming.study();
+let xiaohong = new Studen('xiaohong', 15, 'A2')
+xiaohong.speak();
