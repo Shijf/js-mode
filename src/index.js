@@ -1,15 +1,29 @@
 class Person {
-    constructor(name){
-        this.name = name
+    constructor(name, age){
+        this.name = name,
+        this.age = age
     }
 
 
     getName() {
-        return this.name
+        return this.name;
+    }
+
+    getAge() {
+        return this.age;
+    }
+
+
+    eat() {
+        alert(123);
+    }
+
+    speak() {
+        alert("456");
     }
 }
 
 
-let p = new Person('shijf')
+let p = new Person('shijf', 15)
 
-alert(p.getName())
+p.eat();
