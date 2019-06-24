@@ -15,11 +15,11 @@ class Person {
 
 
     eat() {
-        alert(123);
+        alert(`${this.getName} 可以吃饭`);
     }
 
     speak() {
-        alert("456");
+        alert(`${this.getName} 可以说话`);
     }
 }
 
